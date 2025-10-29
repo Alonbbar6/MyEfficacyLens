@@ -16,8 +16,6 @@ const nextConfig = {
     '@efficacy/shared-types',
     '@efficacy/shared-utils',
   ],
-  // Output standalone for better deployment
-  output: 'standalone',
 };
 
 module.exports = nextConfig;
