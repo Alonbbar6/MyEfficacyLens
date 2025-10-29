@@ -1,13 +1,13 @@
 [build]
-  command = "npm install -g pnpm && pnpm install && cd apps/web && pnpm run build"
+  command = "corepack enable && corepack prepare pnpm@8.15.0 --activate && pnpm install --frozen-lockfile=false && cd apps/web && pnpm run build"
   publish = "apps/web/.next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_FLAGS = "--version"
+  NODE_VERSION = "18.17.0"
+  PNPM_VERSION = "8.15.0"
 
 # Redirect all requests to Next.js
 [[redirects]]

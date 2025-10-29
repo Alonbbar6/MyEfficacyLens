@@ -10,6 +10,14 @@ const nextConfig = {
       "logos-world.net",
     ],
   },
+  // Transpile workspace packages for monorepo support
+  transpilePackages: [
+    '@efficacy/shared-constants',
+    '@efficacy/shared-types',
+    '@efficacy/shared-utils',
+  ],
+  // Output standalone for better deployment
+  output: 'standalone',
 };
 
 module.exports = nextConfig;
