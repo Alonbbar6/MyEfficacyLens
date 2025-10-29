@@ -1,0 +1,28 @@
+{
+  "name": "efficacy-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Efficacy Political Tracker - Web + Mobile Monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:mobile": "pnpm --filter mobile start",
+    "build:web": "pnpm --filter web build",
+    "build:mobile": "pnpm --filter mobile build",
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "lint": "pnpm --recursive lint",
+    "clean": "pnpm --recursive clean",
+    "install:all": "pnpm install",
+    "test": "pnpm --recursive test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
